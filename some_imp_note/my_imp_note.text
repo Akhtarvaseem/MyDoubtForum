@@ -1,0 +1,11 @@
+/* iTS USE TO RENDER SAME PAGE */
+
+// will display /phptests/self.php
+echo $_SERVER['PHP_SELF'];
+
+// will display /phptests/self.php?id=1
+echo $_SERVER['REQUEST_URI'];
+
+// full- text use for makig search result 
+ALTER TABLE menus ADD FULLTEXT(item);
+SELECT * FROM menus WHERE MATCH(item) AGAINST("pasta");
